@@ -1,0 +1,32 @@
+server:
+  port: 9000
+  
+# 注册到注册中心的服务，不再通过地址访问，而是服务名  
+spring:
+  application:
+    name: invoker
+  cloud:
+  # 开启请求重试
+    loadbalancer:
+      retry:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 15672
+    username: test
+    password: 123456
+# 注册中心
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    # 服务续约的时间
+    lease-renewal-interval-in-seconds: 30
+    # 服务失效的时间
+    lease-expiration-duration-in-seconds: 120
+  client:
+    service-url:
+      defaulutZone: http://${eureka.instance.hostname}:8761/eureka/
+feign:
+  hystrix:
+    enabled: true      

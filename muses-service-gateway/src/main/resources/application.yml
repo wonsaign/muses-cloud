@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: muses-gateway
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaulutZone: http://${eureka.instance.hostname}:8761/eureka/
+
+zuul:
+  routes:
+    sale:
+      path: /sale/**
+      # 路由的服务器Id
+      service-id: invoker     
+#zuul:
+ # routes:
+    # Map
+    # this is key
+  #  books:
+      #the value
+   #   url: http://localhost:8090
