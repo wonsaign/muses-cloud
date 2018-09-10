@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>muses-framework</groupId>
-	<artifactId>muses-bootservice</artifactId>
+	<artifactId>muses-bootservice-slaver</artifactId>
 	<packaging>jar</packaging>
 
-	<name>muses-bootservice</name>
-	<description>eureka-service</description>
+	<name>muses-bootservice-slaver</name>
+	<description>eureka-service-slaver</description>
 
 	<parent>
 		<groupId>muses-cloud-integration</groupId>
