@@ -8,7 +8,8 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaulutZone: http://${eureka.instance.hostname}:8761/eureka/
+      #defaulutZone: http://${eureka.instance.hostname}:8761/eureka/
+      defaulutZone: http://master:8761/eureka/,http://slaver:8762/eureka/
 
 zuul:
   routes:
