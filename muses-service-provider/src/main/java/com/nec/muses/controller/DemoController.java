@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.messaging.support.MessageBuilder;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -31,13 +32,15 @@ public class DemoController {
 		return "MQ SUCCESS";
 	}
 	
+	
 	@RequestMapping(value = "/person/{personId}" , 
 			method = RequestMethod.GET , produces = MediaType.APPLICATION_JSON_VALUE)
 	public Person findPerson(@PathVariable("personId")Integer personId) {
 		return new Person(personId, "Inject1", 18);
 	}
 
-	@RequestMapping(value="/hello",method = RequestMethod.GET)
+	@GetMapping("/hello")
+//	@RequestMapping(value="/hello",method = RequestMethod.GET)
 	public String hello() {
 		return "hello , Feign hello.";
 	}

@@ -1,5 +1,24 @@
-server:
-  port: 8082
+#server:
+  #port: 8082
+
+#默认激活哪一个环境的配置文件
+spring:
+  profiles:
+    active: dev
+  #公共配置
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+---     
+spring:
+  profiles: dev 
+  application:
+     name: dev-port    
+---  
+spring:
+  profiles: test 
+  application:
+     name: test-port   
+---          
 
 # 注册到注册中心的服务，不再通过地址访问，而是服务名  
 spring:
