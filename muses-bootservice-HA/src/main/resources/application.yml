@@ -3,5 +3,9 @@ spring:
     name: eureka
   profiles:
     active: mate2  
-      
 
+      
+# >  when this happened , it`s warning the eureka to protected itself, 15 mins the heart breaking less than 85%,the eureka to
+# >  make the microservice to not time out,so need to hystrix to help this.
+# EMERGENCY! EUREKA MAY BE INCORRECTLY CLAIMING INSTANCES ARE UP WHEN THEY'RE NOT.
+# RENEWALS ARE LESSER THAN THRESHOLD AND HENCE THE INSTANCES ARE NOT BEING EXPIRED JUST TO BE SAFE

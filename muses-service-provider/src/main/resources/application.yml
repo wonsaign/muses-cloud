@@ -26,21 +26,24 @@ spring:
 eureka:
   instance:
     hostname: localhost
+    # 是否优先使用ip作为主机的标识,默认是false,localhost <=> 127.0.0.1
     prefer-ip-address: true
+    # InstanceInfo 元数据中的instanceId,默认使用主机名
+    instance-id: ${spring.application.name}:${random.int}
   client:
     service-url:
-      defaultZone: http://master:8001/eureka/,http://slaver:8002/eureka/
-      #defaulutZone: http://${spring.application.name}:8761/eureka/    
+      defaultZone: http://mate1:8001/eureka/,http://mate2:8002/eureka/
+      #defaulutZone: http://${spring.application.name}:8761/eureka/  
+          
 ---     
 spring:
   profiles: dev 
   application:
-     name: dev-provider    
+     name: provider    
 ---  
 spring:
   profiles: test 
   application:
-     name: test-provider   
-          
+     name: test-provider         
 
 
