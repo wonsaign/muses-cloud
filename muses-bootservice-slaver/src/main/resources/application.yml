@@ -1,20 +1,21 @@
-server:
-  port: 8762
-
 spring:
   application:
     name: eureka
+
+server:
+  port: 8002
+
     
 #注册中心
 eureka:
   instance:
     hostname: slaver
-    prefer-ip-address: true
+    #prefer-ip-address: true
   client:
-    #不将自身注册到服务器
-    register-with-eureka: false
-    #不需要检索服务
-    fetch-registry: false
+    #不将自身注册到服务器 - > false
+    register-with-eureka: true
+    #不需要检索服务 ->false
+    fetch-registry: true
     service-url:
     #声明注册中心的地址和端口
-      defaulutZone: http://master:8761/eureka/
+      defaulutZone: http://master:8001/eureka/

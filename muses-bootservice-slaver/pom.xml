@@ -8,7 +8,7 @@
 	<packaging>jar</packaging>
 
 	<name>muses-bootservice-slaver</name>
-	<description>eureka-service-slaver</description>.
+	<description>eureka-service-slaver</description>
 
 	<parent>
 		<groupId>muses-cloud-integration</groupId>
