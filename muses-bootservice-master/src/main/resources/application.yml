@@ -17,4 +17,6 @@ eureka:
     fetch-registry: true
     service-url:
     #声明注册中心的地址和端口
-      defaulutZone: http://slaver:8002/eureka/
+      defaultZone: http://slaver:8002/eureka/
+    healthcheck:
+       enabled: true  

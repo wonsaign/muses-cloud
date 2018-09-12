@@ -27,7 +27,7 @@ eureka:
   client:
     service-url:
       #defaulutZone: http://${eureka.instance.hostname}:8761/eureka/
-      defaulutZone: http://master:8761/eureka/,http://slaver:8762/eureka/
+      defaultZone: http://master:8761/eureka/,http://slaver:8762/eureka/
 feign:
   hystrix:
     enabled: true      
