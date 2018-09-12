@@ -42,5 +42,5 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://master:8761/eureka/,http://slaver:8762/eureka/
+      defaultZone: http://master:8001/eureka/,http://slaver:8002/eureka/
       #defaulutZone: http://${spring.application.name}:8761/eureka/
