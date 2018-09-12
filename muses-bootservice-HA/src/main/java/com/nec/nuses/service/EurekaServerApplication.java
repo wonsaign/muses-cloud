@@ -15,9 +15,9 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  * 通信：默认使用Jersey和XStream配合Json组为service和client之间的通信     
  */
 @EnableEurekaServer
-public class EurekaServiceMasterApplication {
+public class EurekaServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EurekaServiceMasterApplication.class, args);
+		SpringApplication.run(EurekaServerApplication.class, args);
 	}
 }
