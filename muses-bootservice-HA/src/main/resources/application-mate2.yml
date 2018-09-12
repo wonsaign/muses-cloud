@@ -1,14 +1,9 @@
 server:
-  port: 8001
-
-spring:
-  application:
-    name: eureka
-    
+  port: 8002
 #注册中心
 eureka:
   instance:
-    hostname: master
+    hostname: mate2
     #prefer-ip-address: true
   client:
     #不将自身注册到服务器 - > false
@@ -17,6 +12,6 @@ eureka:
     fetch-registry: true
     service-url:
     #声明注册中心的地址和端口
-      defaultZone: http://slaver:8002/eureka/
+      defaultZone: http://mate1:8001/eureka/
     healthcheck:
-       enabled: true  
+       enabled: true

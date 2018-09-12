@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>muses-framework</groupId>
-	<artifactId>muses-bootservice-slaver</artifactId>
+	<artifactId>muses-bootservice-HA</artifactId>
 	<packaging>jar</packaging>
 
-	<name>muses-bootservice-slaver</name>
-	<description>eureka-service-slaver</description>
+	<name>muses-bootservice-HA</name>
+	<description>eureka-service-HA</description>
 
 	<parent>
 		<groupId>muses-cloud-integration</groupId>
@@ -28,7 +28,10 @@
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>

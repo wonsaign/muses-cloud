@@ -20,8 +20,7 @@
 	</properties>
 
 	<modules>
-		<module>muses-bootservice-slaver</module>
-		<module>muses-bootservice-master</module>
+		<module>muses-bootservice-HA</module>
 		<module>muses-service-gateway</module>
 		<module>muses-service-invoker</module>
 		<module>muses-service-provider</module>
