@@ -1,0 +1,9 @@
+
+server:
+   port: 8182
+eureka:
+  instance:
+    # 续约时间
+    lease-renewal-interval-in-seconds: 20
+    # 超时时间
+    lease-expiration-duration-in-seconds: 60   

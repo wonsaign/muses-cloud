@@ -1,11 +1,9 @@
-#server:
-  #port: 8082
+#公共配置
 
-#默认激活哪一个环境的配置文件
 spring:
   profiles:
+    #默认激活哪一个环境的配置文件
     active: dev
-  #公共配置
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
   rabbitmq:
@@ -13,18 +11,7 @@ spring:
     port: 15672
     username: test
     password: 123456
----     
-spring:
-  profiles: dev 
-  application:
-     name: dev-provider    
----  
-spring:
-  profiles: test 
-  application:
-     name: test-provider   
----          
-
+    
 # 注册到注册中心的服务，不再通过地址访问，而是服务名  
 #spring:
   #application:
@@ -43,4 +30,17 @@ eureka:
   client:
     service-url:
       defaultZone: http://master:8001/eureka/,http://slaver:8002/eureka/
-      #defaulutZone: http://${spring.application.name}:8761/eureka/
+      #defaulutZone: http://${spring.application.name}:8761/eureka/    
+---     
+spring:
+  profiles: dev 
+  application:
+     name: dev-provider    
+---  
+spring:
+  profiles: test 
+  application:
+     name: test-provider   
+          
+
+
