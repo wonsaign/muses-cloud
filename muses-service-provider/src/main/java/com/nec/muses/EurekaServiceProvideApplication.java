@@ -16,11 +16,11 @@ import com.nec.muses.service.SendService;
 public class EurekaServiceProvideApplication {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(EurekaServiceProvideApplication.class, args);
-		@SuppressWarnings("resource")
-		Scanner scan = new Scanner(System.in); 
-		String port = scan.nextLine(); 
-		new SpringApplicationBuilder(EurekaServiceProvideApplication.class).properties( 
-		"server.port=" + port).run(args); 
+		SpringApplication.run(EurekaServiceProvideApplication.class, args);
+//		@SuppressWarnings("resource")
+//		Scanner scan = new Scanner(System.in); 
+//		String port = scan.nextLine(); 
+//		new SpringApplicationBuilder(EurekaServiceProvideApplication.class).properties( 
+//		"server.port=" + port).run(args); 
 	}
 }

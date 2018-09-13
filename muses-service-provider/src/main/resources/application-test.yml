@@ -1,6 +1,6 @@
 
-#server:
-   #port: 8182
+server:
+   port: 8182
 eureka:
   instance:
     # 续约时间

@@ -2,7 +2,7 @@ spring:
   application:
     name: eureka
   profiles:
-    active: mate2  
+    active: mate1  
 
       
 # >  when this happened , it`s warning the eureka to protected itself, 15 mins the heart breaking less than 85%,the eureka to

@@ -21,10 +21,10 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 public class EurekaServerApplication {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(EurekaServerApplication.class, args);
-		@SuppressWarnings("resource")
-		Scanner scan = new Scanner(System.in); 
-		String profiles = scan.nextLine(); 
-		new SpringApplicationBuilder(EurekaServerApplication.class).profiles(profiles).run(args);  
+		SpringApplication.run(EurekaServerApplication.class, args);
+//		@SuppressWarnings("resource")
+//		Scanner scan = new Scanner(System.in); 
+//		String profiles = scan.nextLine(); 
+//		new SpringApplicationBuilder(EurekaServerApplication.class).profiles(profiles).run(args);  
 	}
 }
