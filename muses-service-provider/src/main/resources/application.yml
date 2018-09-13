@@ -3,7 +3,7 @@
 spring:
   profiles:
     #默认激活哪一个环境的配置文件
-    active: dev
+    active: test
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
   rabbitmq:
@@ -27,7 +27,7 @@ eureka:
   instance:
     hostname: localhost
     # 是否优先使用ip作为主机的标识,默认是false,localhost <=> 127.0.0.1
-    prefer-ip-address: true
+    prefer-ip-address: false
     # InstanceInfo 元数据中的instanceId,默认使用主机名
     instance-id: ${spring.application.name}:${random.int}
   client:
@@ -44,6 +44,7 @@ spring:
 spring:
   profiles: test 
   application:
-     name: test-provider         
+     name: provider 
+     #name: test-provider          
 
 
