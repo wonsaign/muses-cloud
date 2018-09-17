@@ -2,6 +2,7 @@ package com.nec.muses.bean;
 
 
 public class Book{
+	int bookId;
 	int personId;
 	String name;
 	String author;
@@ -15,6 +16,12 @@ public class Book{
 		this.personId = personId;
 		this.name = name;
 		this.author = author;
+	}
+	public int getBookId() {
+		return bookId;
+	}
+	public void setBookId(int bookId) {
+		this.bookId = bookId;
 	}
 	public int getPersonId() {
 		return personId;
